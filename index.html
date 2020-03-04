@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>World of Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron"><h1>Downtown Pizza</h1>
+        <h3>About Us</h3>
+        <p>World of Pizza is a built and bred in Kenya. All our ingredients are locally sourced. Our team is made of four excellent chefs, all of Italian descent. </p>
+        <p>As it is known, pizza originates from Italy. So if you want it done to perfection, how about have them do it for you? 😉</p>
+      </div>
+      <div class="row justify-content-around">
+        <form id="pizzaMenu" class="col-md-5">
+          
+          <h1>Pizza Menu</h1>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-3 col-form-label" for="pizzaSize">Size of Pizza</label>
+            <select id="pizzaSize" class="form-control col-sm-9">
+              <option value="500">Small @500/=</option>
+              <option value="750">Medium @750/=</option>
+              <option value="1000">Large @1000/=</option>
+            </select>
+          </div>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-3 col-form-label" for="pizzaCrust">Type of Crust</label>
+            <select id="pizzaCrust" class="form-control col-sm-9">
+              <option value="100">Thin @100/=</option>
+              <option value="200">Regular @200/=</option>
+              <option value="300">Thick @300/=</option>
+            </select>
+          </div>
+          <fieldset id="pizzaToppings" class="form-group" form="pizzaMenu">
+            <div class="row align-items-center">
+              <legend class="col-form-label col-sm-3">Extra Toppings</legend>
+              <div class="col-sm-12">
+                <div class="form-check">
+                  <input class="form-check-input" id="chicken" type="checkbox" value="30" />
+                  <label class="form-check-label" for="chicken">Grilled Chicken @30/=</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="bacon" type="checkbox" value="50" />
+                  <label class="form-check-label" for="bacon">Beef Bacon @50/=</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="ham" type="checkbox" value="70" />
+                  <label class="form-check-label" for="ham">Beef Ham @70/=</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="mushroom" type="checkbox" value="20" />
+                  <label class="form-check-label" for="mushroom">Fresh Mushrooms @20/=</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="pineapple" type="checkbox" value="60" />
+                  <label class="form-check-label" for="pineapple">Pineapple @60/=</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="cheese" type="checkbox" value="70" />
+                  <label class="form-check-label" for="cheese">Extra Cheese @70/=</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-3 col-form-label" for="pizzaCount">Number of Pizzas</label>
+            <input class="form-control col-sm-9" id="pizzaCount" type="number" min="1" />
+          </div>
+          <div class="form-group mr-n3">
+            <button class="btn btn-outline-success form-control" type="submit">Place Your Order</button>
+          </div>
+        </form>
+        <div id="pizzaCart" class="col-md-6">
+          <h1>Pizza Cart</h1>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Crust</th>
+                <th>Toppings</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <hr/>
+          <p>The total charge is <span id="tt-charge">0</span>/=</p>
+          <form id="delivery">
+            <p>Would you like a delivery at 300/=?</p>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="delivery" type="radio" id="pick-up" value="pick"/>
+              <label class="form-check-label" for="pick-up">
+                Pick-Up
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="delivery" type="radio" id="deliver" value="deliver"/>
+              <label class="form-check-label" for="deliver">
+                Delivery
+              </label>
+            </div>
+            <input class="form-control" id="deliveryLocation" type="text" placeholder="Delivery Location..."/>
+          </form>
+          <button id="checkoutBtn" class="btn btn-outline-success form-control">Checkout</button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
